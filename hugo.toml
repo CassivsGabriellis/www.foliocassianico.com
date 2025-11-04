@@ -1,0 +1,86 @@
+# baseURL = 'https://foliocassianico.com/'
+languageCode = 'en'
+title = 'Cássio Gabriel'
+theme = 'typo'
+
+# Google analytics code
+# googleAnalytics = "G-xxxxxxxxx"
+
+[taxonomies]
+tag = 'tags'
+
+[params]
+# Meta description
+description = "Portfolio and blog to post projects and ideias, by Cássio Gabriel."
+
+# Appearance settings
+theme = 'auto | light | dark'
+colorPalette = 'gruvebox'
+hideHeader = false
+
+# Intro on main page, content is markdown
+homeIntroTitle = 'Welcome!'
+homeIntroContent = """
+Text to be added.
+"""
+
+# Collection to display on home
+# homeCollectionTitle = 'Posts'
+# homeCollection = 'posts'
+
+# Lists parameters
+paginationSize = 100
+listSummaries = true
+listDateFormat = '2 Jan 2006'
+
+# Breadcrumbs
+[params.breadcrumbs]
+enabled = true
+showCurrentPage = true
+home = "~"
+
+# Social icons
+[[params.social]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/cassivs-contato/"
+
+[[params.social]]
+name = "github"
+url = "https://github.com/CassivsGabriellis"
+
+# Main menu pages
+[[params.menu]]
+name = "home"
+url = "/"
+
+[[params.menu]]
+name = "projects"
+url = "/projects"
+
+[[params.menu]]
+name = "posts"
+url = "/posts"
+
+[[params.menu]]
+name = "about"
+url = "/about"
+
+# Syntax highlight on code blocks
+[markup]
+[markup.highlight]
+style = 'algol'
+
+# Giscus comments
+[params.giscus]
+enable = false
+repo = "user/repo"
+repoid = "repoId"
+category = "General"
+categoryid = "categoryId"
+mapping = "pathname"
+theme = "preferred_color_scheme"
+
+[deployment]
+  [[deployment.targets]]
+    name = 'production'
+    url = 's3://foliocassianico.com?region=sa-east-1'
