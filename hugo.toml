@@ -1,4 +1,4 @@
-# baseURL = 'https://foliocassianico.com/'
+baseURL = 'http://foliocassianico.com.s3-website-sa-east-1.amazonaws.com'
 languageCode = 'en'
 title = 'Cássio Gabriel'
 theme = 'typo'
@@ -80,7 +80,23 @@ categoryid = "categoryId"
 mapping = "pathname"
 theme = "preferred_color_scheme"
 
+###################################
+
+# Deploy config
 [deployment]
-  [[deployment.targets]]
-    name = 'production'
-    url = 's3://foliocassianico.com?region=sa-east-1'
+[[deployment.targets]]
+name = 'production'
+url = 's3://foliocassianico.com?region=sa-east-1'
+
+# If using CloudFront CDN, deploy will invalidate the cache as needed.
+# cloudFrontDistributionID =	"[CLOUDFRONT_DIST_ID]"
+
+[[deployment.matchers]]
+# Cache static assets for 20 years.
+pattern = "^.+\\.(js|css|png|jpg|gif|svg|ttf)$"
+cacheControl = "max-age=630720000, no-transform, public"
+gzip = true
+
+[[deployment.matchers]]
+pattern = "^.+\\.(html|xml|json)$"
+gzip = true
