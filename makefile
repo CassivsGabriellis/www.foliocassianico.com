@@ -1,11 +1,15 @@
 build:
 	hugo --minify
-clean:
+
+clean: 
 	rm -r public
-run:
+
+run: 
 	hugo server --disableFastRender -D
+
 pull: 
 	git pull && git submodule update --remote --merge
+
 push: pull
 	git submodule update --remote --merge
 	git add . && git commit -m "Update" && git push
