@@ -60,9 +60,7 @@ jobs:
 
   # Deployment job
   deploy:
-    environment: # Show the deployement version in the remote repository
-      name: production
-      url: http://foliocassianico.com.s3-website-sa-east-1.amazonaws.com
+    environment: production # Show the deployement version in the remote repository
     runs-on: ubuntu-latest
     needs: build
     steps:
