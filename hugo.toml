@@ -18,7 +18,11 @@ hideHeader = false
 # Intro on main page, content is markdown
 homeIntroTitle = 'Welcome!'
 homeIntroContent = """
-Text to be added.
+Hi, I'm Cássio — a developer focused on cloud solutions, automation, and DevOps practices. I work at the intersection of software and infrastructure, building scalable and reliable systems.
+
+I have hands-on experience with AWS, Linux servers, and tools like Docker, Docker Compose, Ansible, and Terraform. I use GitHub Actions for CI/CD pipelines and have practical experience with Kubernetes for container orchestration.
+
+I code mainly in Golang, Python and Bash, and design backend architectures using PostgreSQL, MySQL, and MongoDB. My goal is always to deliver efficient, automated, and maintainable cloud environments.
 """
 
 # Collection to display on home
@@ -86,7 +90,7 @@ name = 'production'
 url = 's3://foliocassianico.com?region=sa-east-1'
 
 # If using CloudFront CDN, deploy will invalidate the cache as needed.
-# cloudFrontDistributionID =	"[CLOUDFRONT_DIST_ID]"
+cloudFrontDistributionID =	"E2NSG34ZM98NK3"
 
 [[deployment.matchers]]
 # Cache static assets for 20 years.
