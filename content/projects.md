@@ -10,7 +10,7 @@ toc = false
 readTime = true
 +++
 
-[foliocassianico.com](https://github.com/CassivsGabriellis/foliocassianico.com)
+[www.foliocassianico.com](https://github.com/CassivsGabriellis/www.foliocassianico.com)
 - A Hugo static file site to publish my projects and ideas, fully automated using GitHub actions publishing both in a AWS S3 bucket and in a GitHub Pages repo [here](https://github.com/CassivsGabriellis/cassivsgabriellis.github.io).
 
 [Server Performance Stats](https://github.com/CassivsGabriellis/server-performance-stats-script)
