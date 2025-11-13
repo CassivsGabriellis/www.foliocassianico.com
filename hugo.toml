@@ -1,5 +1,5 @@
 # baseURL = 'https://www.foliocassianico.com.br'
-languageCode = 'en'
+languageCode = 'en-us'
 title = 'Cássio Gabriel'
 theme = 'typo'
 
@@ -22,7 +22,7 @@ Hi, I'm Cássio — a developer and aspiring cloud architect passionate about bu
 I've gained strong hands-on experience through personal and practical projects involving Linux servers, AWS, and Azure, using tools like Docker, Kubernetes, Ansible, Terraform, and GitHub Actions to design CI/CD pipelines and manage infrastructure as code.
 I enjoy working across the stack, coding primarily in Python, Go, and Bash, and applying DevOps and cloud-native principles to create environments that are efficient, consistent, and easy to maintain.
 
-Take a look at my [projects](https://www.foliocassianico.com.br/projects)!
+Take a look at my [projects]({{< ref "projects" >}})!
 
 Get in touch!
 - [E-mail](mailto:cassiogabrielcontato@gmail.com)
@@ -37,6 +37,9 @@ Get in touch!
 paginationSize = 100
 listSummaries = true
 listDateFormat = '2 Jan 2006'
+
+[frontmatter]
+date = [':filename', ':default']
 
 # Breadcrumbs
 [params.breadcrumbs]
@@ -67,8 +70,8 @@ url = "/projects"
 # url = "/posts"
 
 # [[params.menu]]
-# name = "about"
-# url = "/about"
+# name = "bio"
+# url = "/bio"
 
 # Syntax highlight on code blocks
 [markup]

@@ -1,6 +1,6 @@
 +++
-title = 'About'
-description = "My projects."
+title = 'Bio'
+description = "Bio."
 hideBackToTop = false
 hidePagination = true
 +++
