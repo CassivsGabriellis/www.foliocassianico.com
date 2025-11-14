@@ -1,7 +1,50 @@
-# baseURL = 'https://www.foliocassianico.com.br'
-languageCode = 'en-us'
 title = 'Cássio Gabriel'
 theme = 'typo'
+
+# Multilingual settings
+defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = true
+
+[languages.en]
+languageName = 'English'
+weight = 1
+languageCode = 'en-us'
+title = 'Cássio Gabriel'
+contentDir = 'content/en'
+
+  [languages.en.params]
+  [[languages.en.params.menu]]
+  name = "home"
+  url  = "/en/"
+
+  [[languages.en.params.menu]]
+  name = "projects"
+  url  = "/en/projects"
+
+  [[languages.en.params.menu]]
+  name = "posts"
+  url  = "/en/posts"
+
+
+[languages.pt-br]
+languageName = 'Português (Brasil)'
+weight = 2
+languageCode = 'pt-br'
+title = 'Cássio Gabriel'
+contentDir = 'content/pt-br'
+
+  [languages.pt-br.params]
+  [[languages.pt-br.params.menu]]
+  name = "início"
+  url  = "/pt-br/"
+
+  [[languages.pt-br.params.menu]]
+  name = "projetos"
+  url  = "/pt-br/projects"
+
+  [[languages.pt-br.params.menu]]
+  name = "posts"
+  url  = "/pt-br/posts"
 
 [taxonomies]
 category = 'categories'
@@ -15,20 +58,6 @@ description = "Portfolio and blog to post projects and ideias, by Cássio Gabrie
 theme = 'auto | light | dark'
 colorPalette = 'gruvebox'
 hideHeader = false
-
-# Intro on main page, content is markdown
-homeIntroTitle = 'Welcome!'
-homeIntroContent = """
-Hi, I'm Cássio — a developer and aspiring cloud architect passionate about building reliable, automated, and scalable systems.
-I've gained strong hands-on experience through personal and practical projects involving Linux servers, AWS, and Azure, using tools like Docker, Kubernetes, Ansible, Terraform, and GitHub Actions to design CI/CD pipelines and manage infrastructure as code.
-I enjoy working across the stack, coding primarily in Python, Go, and Bash, and applying DevOps and cloud-native principles to create environments that are efficient, consistent, and easy to maintain.
-
-Take a look at my [projects]({{< ref "projects" >}})!
-
-Get in touch!
-- [E-mail](mailto:cassiogabrielcontato@gmail.com)
-- [LinkedIn](https://www.linkedin.com/in/cassivs-contato/)
-"""
 
 # Collection to display on home
 # homeCollectionTitle = 'Posts'
@@ -53,23 +82,6 @@ url = "https://www.linkedin.com/in/cassivs-contato/"
 [[params.social]]
 name = "github"
 url = "https://github.com/CassivsGabriellis"
-
-# Main menu pages
-[[params.menu]]
-name = "home"
-url = "/"
-
-[[params.menu]]
-name = "projects"
-url = "/projects"
-
-[[params.menu]]
-name = "posts"
-url = "/posts"
-
-# [[params.menu]]
-# name = "bio"
-# url = "/bio"
 
 # Syntax highlight on code blocks
 [markup]

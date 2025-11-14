@@ -1,0 +1,21 @@
+###############################
+
+# "Back to top" label
+[back_to_top]
+other = "back to top"
+
+###############################
+
+[404_title]
+other = "typo?"
+
+[404_message]
+other = "Click"
+
+[404_back_home]
+other = "here"
+
+[404_back_home_plus]
+other = "to return home"
+
+###############################
