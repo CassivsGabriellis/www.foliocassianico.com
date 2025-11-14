@@ -72,20 +72,29 @@
         {{- end }}
         {{- end }}
 
-        {{- /* Table of Contents */}}
+        {{- /* Content + TOC by side */}}
 
         {{- if .Param "toc" }}
-        <aside class="toc">
-            <p><strong>{{ i18n "tocTitle" }}</strong></p>
-            {{ .TableOfContents }}
-        </aside>
-        {{- end }}
+        <div class="single-layout">
+            <div class="single-main">
+                <div class="single-content">
+                    {{ .Content }}
+                </div>
+            </div>
 
-        {{- /* Page content */}}
-
+            <aside class="toc toc-sticky">
+                <p class="toc-title"><strong>{{ i18n "tocTitle" }}</strong></p>
+                <div class="toc-inner">
+                    {{ .TableOfContents }}
+                </div>
+            </aside>
+        </div>
+        {{- else }}
         <div class="single-content">
             {{ .Content }}
         </div>
+        {{- end }}
+
     </article>
 
     {{- /* Comments */}}

@@ -1,0 +1,124 @@
+.single-layout {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.single-layout .single-main {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.single-layout .toc-sticky {
+  width: 230px;
+  max-width: 230px;
+  font-size: 0.9rem;
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+}
+
+.single-layout .toc-sticky .toc-inner {
+  max-height: 80vh;
+  overflow: auto;
+  padding-right: 0.5rem;
+}
+
+.toc-title {
+  margin-bottom: 0.5rem;
+}
+
+.toc-inner ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.toc-inner li {
+  margin-bottom: 0.25rem;
+}
+
+.toc-inner a {
+  text-decoration: none;
+}
+
+/* Imagens dentro do post: nunca maiores que a tela */
+.single-content img,
+.single-content figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Blocos de código: rolagem horizontal própria, não da página inteira */
+.single-content pre {
+  max-width: 100%;
+  overflow-x: auto;
+  box-sizing: border-box;
+}
+
+/* Tabelas também podem estourar – protege elas */
+.single-content table {
+  width: 100%;
+  border-collapse: collapse;
+  display: block;
+  overflow-x: auto;
+}
+
+@media (max-width: 960px) {
+  /* layout vira coluna e ocupa 100% da largura da tela */
+  .single-layout {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .single-layout .single-main,
+  .single-content {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .single-layout .toc-sticky {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    right: auto;
+    top: auto;
+    order: -1;
+    margin-bottom: 1rem;
+  }
+
+  .single-layout .toc-sticky .toc-inner {
+    max-height: none;
+    overflow: visible;
+  }
+
+  /* um pouquinho de respiro nas bordas */
+  .single-content {
+    padding-inline: 0.75rem;
+  }
+
+  /* garantem que nada passe da largura do container */
+  .single-content img,
+  .single-content figure img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .single-content pre {
+    max-width: 100%;
+    overflow-x: auto;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+  }
+
+  .single-content table {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    box-sizing: border-box;
+    display: block;
+  }
+}

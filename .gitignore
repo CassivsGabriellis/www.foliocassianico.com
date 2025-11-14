@@ -1,6 +1,6 @@
 !.gitignore
 Dockerfile
-/.vscode
+.vscode/
 
 # Generated files by hugo
 /public/
