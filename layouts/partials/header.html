@@ -3,6 +3,7 @@
 <div class="header">
 
     {{ partial "language-switcher.html" . }}
+    {{ partial "theme-switch.html" . }}
 
     {{ if or (not (.Param "hideHeader")) .IsHome }}
 
