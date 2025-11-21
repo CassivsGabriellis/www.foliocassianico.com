@@ -22,6 +22,10 @@ Objetivamente, desenvolvi uma API em Python (FastAPI) que coleta métricas da in
 - Configurada com Ansible (instala Docker, K3s, dependências, faz deploy);
 - Atualizada via CI/CD com GitHub Actions (build da imagem e pull do DockerHub, push, deploy automático).
 
+### Diagrama de arquitetura do projeto
+
+![](images/metrics-api-k3s-ec2-architecture.png)
+
 ## API com FastAPI
 
 O papel desta API é expor métricas de desempenho tanto do host onde o pod está executando quanto da própria aplicação, isto é, a API em si, software backend escrito em Python, empacotado em Docker e executado dentro de um cluster Kubernetes — cujo propósito é coletar e expor métricas operacionais tanto do próprio ambiente onde está rodando quanto do seu estado interno.
